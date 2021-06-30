@@ -17,18 +17,20 @@ const cardStyles = theme => ({
 });
 const CardHeader = withStyles(cardStyles)(CardHeaderRaw);
 
-const MetricsCard = ({ metricInfo }) => {
+const MetricsCard = ({metricInfo}) => {
 
   return (
-    <Card className="mt-3 mr-3 text-center d-inline-block">
-      <CardHeader title={metricInfo.metric} />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="div" className="mb-0">
-
-        </Typography>
-      </CardContent>
-    </Card>
-  );
-}
+      <Card className="mt-3 mr-3 text-center d-inline-block">
+        <CardHeader title={metricInfo.metric} />
+        <CardContent>
+          <Typography variant="body2" color="textSecondary" component="div" className="mb-0">
+            <h4>
+              {metricInfo.value} <small className="text-muted">{metricInfo.unit}</small>{' '}
+            </h4>
+          </Typography>
+        </CardContent>
+      </Card>
+    );
+  }
 
 export default MetricsCard;
