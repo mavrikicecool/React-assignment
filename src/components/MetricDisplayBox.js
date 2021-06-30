@@ -13,9 +13,9 @@ function Metrics({ metricName }) {
   if (error) return `Error! ${error}`;
 
   return (
-    <div style={{ width: '200px', height: '100px', marginLeft: '2rem', display: 'inline-block', marginTop: '1rem' }}>
-
-    </div>
+      <div style={{width: '200px', height: '100px', marginLeft: '2rem', display: 'inline-block', marginTop: '1rem'}}>
+      <MetricsCard metricInfo={data && data.getLastKnownMeasurement} />
+      </div>
   )
 }
 
